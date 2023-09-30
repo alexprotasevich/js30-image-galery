@@ -1,14 +1,9 @@
 // style
 
-body {
-    min-height: 100vh;
-}
-
 .fix-size {
-    max-width: 800px;
+    max-width: 1180px;
     margin: 0 auto;
 }
-
 
 // header
 
@@ -64,7 +59,28 @@ body {
 }
 
 
+// main
 
+.wrapper-gallery {
+    margin-bottom: 15px;
+
+    .gallery {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
+
+        .image{
+            background-position: center;
+            background-size: cover;
+            width: 380px;
+            height: 220px;
+            margin-top: 15px;
+            box-shadow: 0px 0px 17px -4px rgba(25, 207, 246, 0.6);
+        }
+    }
+}
 
 
 /* footer */
@@ -103,5 +119,16 @@ body {
     .rslogo-img {
         width: 80px;
         height: 30px;
+    }
+}
+
+
+// mediaquery
+
+
+@media screen and (min-width: 400px) and (max-width: 550px) {
+    .header-wrapper {
+        flex-direction: column;
+        padding-bottom: 15px;
     }
 }
