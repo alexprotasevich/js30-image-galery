@@ -1,1 +1,35 @@
-/*# sourceMappingURL=style.css.map */
+.svg {
+  transform: rotate(-90deg);
+  transform-origin: center center;
+}
+
+/* footer */
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-block: 5px;
+}
+
+.footer a {
+  font-size: 16px;
+  text-decoration: none;
+  color: rgb(56, 55, 55);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  color: rgb(243, 247, 14);
+}
+
+.time {
+  font-size: 16px;
+  color: rgb(56, 55, 55);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.rslogo .rslogo-img {
+  width: 80px;
+  height: 30px;
+}/*# sourceMappingURL=style.css.map */
