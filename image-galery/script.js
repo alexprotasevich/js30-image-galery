@@ -41,7 +41,7 @@ function cleanInput() {
 
 function requestFromApi (search = 'javascript') {
     gallery.textContent = '';
-    const url = `https://api.unsplash.com/search/photos?query=${search}&per_page=30&client_id=SouHY7Uul-OxoMl3LL3c0NkxUtjIrKwf3tsGk1JaiVo`;
+    const url = `https://api.unsplash.com/search/photos?query=${search}&per_page=30&client_id=sUS67w3YLcrLrr78TgPalNL6g2Watsu7tqbuUNVU8Sc`;
 
     fetch(url)
     .then(response => {
