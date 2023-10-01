@@ -3,22 +3,41 @@
 const input = document.getElementById('input-search');
 const search = document.getElementById('svg-search');
 const gallery = document.getElementById('gallery');
+const clean = document.getElementById('clean-svg');
 
 init();
 
 function init() {
     requestFromApi();
+    input.focus();
 }
 
-input.addEventListener('keydown', (event) => {
-    if (event.key == 'Enter') {
+input.addEventListener('keydown', (e) => {
+    if (e.key == 'Enter' && input.value.length > 0 ) {
         requestFromApi(input.value);
     }
 });
 
 search.addEventListener('click', () => {
-    requestFromApi(input.value);
+    if (input.value.length > 0) {
+        requestFromApi(input.value);
+    }
 });
+
+input.addEventListener('input', cleanInput);
+
+clean.addEventListener('click', () => {
+    input.value = '';
+    cleanInput();
+})
+
+function cleanInput() {
+    if (input.value.length > 0) {
+        clean.style.display = 'block';
+    } else {
+        clean.style.display = 'none';
+    }
+}
 
 function requestFromApi (search = 'javascript') {
     gallery.textContent = '';
